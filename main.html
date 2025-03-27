@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Web Technology Quiz</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="quiz-container">
+            <h1>Quiz</h1>
+            <div id="timer">Time left: <span id="time">10</span> seconds</div>
+            <div id="question-container">
+                <p id="question">Loading...</p>
+                <div id="options-container">
+                    <!-- Options will be loaded here -->
+                </div>
+            </div>
+            <button id="next-btn" onclick="nextQuestion()" disabled>Next Question</button>
+            <div id="score-container" style="display: none;">
+                <h2>Your Final Score: <span id="score">0</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

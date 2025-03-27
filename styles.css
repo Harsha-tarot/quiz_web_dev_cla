@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: white; /* White text */
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(45deg, #4b0082, #070409, #b8860b); /* Deep purple, indigo, and gold gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Keep header fixed */
+    left: 0;
+    top: 0; /* Fixed to top of the page */
+}
+
+.main-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-grow: 1; /* Take up remaining space */
+    margin-top: 80px; /* Space for header */
+}
+
+.quiz-container {
+    background-color: #1E1E1E; /* Darker background for the container */
+    padding: 20px;
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 300px;
+    flex: 0 1 auto; /* Prevents the quiz container from expanding too much */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold for the title */
+}
+
+#timer {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded button */
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #666; /* Disabled button color */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#options-container {
+    margin-bottom: 20px;
+}
+
+#options-container button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #333; /* Dark background for options */
+    border: 1px solid #444;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded option buttons */
+    transition: background-color 0.3s;
+}
+
+#options-container button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Score container styling */
+#score-container {
+    margin-top: 20px;
+    display: none; /* Hidden initially */
+}
+
+#score-container h2 {
+    font-size: 30px; /* Larger font for score */
+    font-weight: bold;
+    color: #FFD700; /* Gold color for the score text */
+    animation: flashScore 2s ease-in-out infinite; /* Flash effect */
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700, 0 0 45px #FFD700; /* Glowing effect */
+}
+
+/* Flash effect for score */
+@keyframes flashScore {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+}
